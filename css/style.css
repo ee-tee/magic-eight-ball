@@ -1,0 +1,461 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:200,400);  /* Semi-rounded font, I will use this for the document */
+@import url(https://fonts.googleapis.com/css?family=Baloo+2:400,800&display=swap);  /* Rounded font, use this for the chat bubbles */
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);  /* Condensed, narrow font */
+
+/* ----- Main CSS ----- */
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", cursive;
+}
+
+html {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center; 
+  /* Color Scheme 1: Blue Lagoon */
+  background: #191654;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Color Scheme 2: Jack Dorsey */
+  /* background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%); */
+  padding: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: gray 5px 5px;
+  color: white;
+}
+
+.titleBox {
+  /* background-color: rgb(220, 220, 220, 0.5); */
+  width: fit-content;
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+
+/* ----- Blue Button ----- */
+
+/* .btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+
+.info {
+  border-color: #2196F3;
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+/* ----- Magic Eight Ball ----- */
+
+.the-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #DFDBE5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%239C92AC' fill-opacity='0.16' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
+  height: 100vh;
+  }
+  .top-words{
+      font-size: 35px;
+      color: rgb(51, 50, 50);
+      margin: 7px;
+      text-align: center;
+      background-color: #B89FDC;
+      padding: 5px 10px;
+      border-radius: 5px;
+  }
+  .activate-ball{
+    margin: 10px;
+      font-size: 30px;
+     cursor: pointer;
+     background-color: #f7eb4a;
+     padding: 5px;
+     border-radius: 5px;
+     box-shadow: 0px 3px 5px;
+     color: rgb(31, 30, 30);
+     transition: all .2s ease-in-out;
+  }
+  .activate-ball:hover{
+    background-color: #f7eb4a;
+    box-shadow: 0px 6px 8px;
+    
+  }
+ 
+  .outer-ball{
+      border-radius: 50%;
+      height: max-content;
+      margin: 10px;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+      background: radial-gradient(circle at 100px 100px, #124b88, #000);
+    }
+    .text-outer-circle{
+        width: 130px;
+        height: 130px;
+        background-color: black;
+        background: radial-gradient(circle at 100px 100px, #0d4581, #000);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    .animate-ball{
+      animation: move-eight-ball 3s ease-in-out 1;
+    }
+    .text-circle{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #2633ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      color: #fff;
+      
+    }
+    .eight-ball-text{
+        padding: 15px;
+      font-weight: bold;
+      display:flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .animate-text{
+       animation: text-animation 3s ease-in-out 1;
+    }
+  
+    @keyframes move-eight-ball {
+      0% {
+        transform: none;
+      }
+      50%, 60% {
+        transform: translateX(68px) translateY(-40px) skewX(5deg) skewY(2deg) scaleX(0.95);
+      }
+      100% {
+        transform: none;
+      }
+    }
+    @keyframes text-animation {
+        0% {
+            opacity: 1;
+            
+        }
+        50%, 70% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+
+/* ----- Chat Bubbles ----- */
+
+.bubble-body-left {
+  /* height: 100vh; */
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font: 2vw system-ui;
+  word-wrap: break-word;
+}
+
+.bubble-body-right {
+  /* height: 100vh; */
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font: 2vw system-ui;
+  word-wrap: break-word;
+}
+
+.bubble-body-left p {
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
+  mix-blend-mode: multiply;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 15px;
+  color: #1F3541;
+  background-color: #AFD8F2;
+  padding: 50px;
+  border-radius: 11px;
+  position: relative;
+  box-shadow: 20px 20px #5289B5;
+  font-family: "Baloo 2", cursive;
+  word-wrap: break-word;
+}
+
+.bubble-body-left p:after {
+  transform: translatey(0px);
+  animation: float2 5s ease-in-out infinite;
+  content: ".";
+  font-weight: bold;
+  -webkit-text-fill-color: #AFD8F2;
+  text-shadow: 22px 22px #5289B5;
+  text-align: left;
+  font-size: 55px;
+  width: 55px;
+  height: 11px;
+  line-height: 30px;
+  border-radius: 11px;
+  background-color: #AFD8F2;
+  position: absolute;
+  display: block;
+  bottom: -30px;
+  left: 0;
+  box-shadow: 22px 22px #5289B5;
+  z-index: -2;
+  word-wrap: break-word;
+}
+
+.bubble-body-right p {
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
+  mix-blend-mode: multiply;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 15px;
+  color: #1F3541;
+  background-color: #AFD8F2;
+  padding: 50px;
+  border-radius: 11px;
+  position: relative;
+  box-shadow: 20px 20px #5289B5;
+  font-family: "Baloo 2", cursive;
+  word-wrap: break-word;
+}
+
+.bubble-body-right p:after {
+  transform: translatey(0px);
+  animation: float2 5s ease-in-out infinite;
+  content: ".";
+  font-weight: bold;
+  -webkit-text-fill-color: #AFD8F2;
+  text-shadow: 22px 22px #5289B5;
+  text-align: right;
+  font-size: 55px;
+  width: 55px;
+  height: 11px;
+  line-height: 30px;
+  border-radius: 11px;
+  background-color: #AFD8F2;
+  position: absolute;
+  display: block;
+  bottom: -30px;
+  right: 0;
+  box-shadow: 22px 22px #5289B5;
+  z-index: -2;
+  word-wrap: break-word;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+ }
+  50% {
+    transform: translatey(-20px);
+ }
+  100% {
+    transform: translatey(0px);
+ }
+}
+
+@keyframes float2 {
+  0% {
+    line-height: 30px;
+    transform: translatey(0px);
+ }
+  55% {
+    transform: translatey(-20px);
+ }
+  60% {
+    line-height: 10px;
+ }
+  100% {
+    line-height: 30px;
+    transform: translatey(0px);
+ }
+}
+
+/* ----- Question Box ----- */
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+/* ----- Animated Border ----- */
+
+.animated-box {
+  font-family: 'Lato';
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.animated-box h1 {
+  font-weight: 200;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.animated-box p {
+  font-weight: 200;
+}
+
+/* The animation starts here */
+.animated-box {
+  position: relative;
+}
+
+.animated-box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background: linear-gradient(120deg, #00F260, #0575E6, #00F260);
+  background-size: 300% 300%;
+  clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.animated-box.in:after {
+  animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+}
+
+/* Motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
+
+/* ----- Breakpoint Settings ----- */
+
+#smallScreen {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+  /* Switch from horizontal layout to vertical layout */
+  #defaultScreen {
+      display: none;
+  }
+
+  #smallScreen {
+      display: flex;
+  }
+  
+}
+
+    
