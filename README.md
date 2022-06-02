@@ -18,10 +18,11 @@ Presenting... Magic Mama the Mystic Fortune Teller at your service! 🔮✨</p>
 This is just for entertainment purposes, please don't take the answers too seriously. 
 Whether good or bad, life goes on so try again or move on and just do your best! </p>
 
-<p>Try out the game at the link below and I hope you will enjoy playing it too! (>‿◠)✌</p>
-<br>
+<p>//TODO: Optimization for mobile screen, UI/UX improvement, etc. I will revisit this project and work on these aspects when there is time.</p>
+
 <hr>
 <br>
+<p>Try it out at the link below and I hope you will enjoy playing it too! (>‿◠)✌</p>
 <p>Browser Version: <a href="https://ee-tee.github.io/magic-eight-ball/">https://ee-tee.github.io/magic-eight-ball/</a></p>
 <p>(magicEightBallWeb.js)</p>
 <p>
